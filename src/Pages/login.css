@@ -1,0 +1,67 @@
+
+.wapper{
+    margin:auto;
+    margin-top: 100px;
+    padding: 30px;
+    width: 50vw;
+    height: 50vh;
+    box-shadow: 5px 4px 8px -1px rgba(43,43,43,0.94);
+    display: flex;
+    flex-direction: column;
+}
+
+.titleLogIn{
+    text-align: center;
+    font-weight: 400;
+}
+
+.logInWapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logInLeft {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+.socialIcon{
+    width: 100px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.logInRight{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.textInput{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 250px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.btnLogIn {
+    width: max-content;
+    padding: 5px 10px;
+    background-color: transparent;
+}
+
