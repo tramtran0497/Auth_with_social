@@ -1,6 +1,6 @@
 import './login.css';
 import { BsFacebook, BsGoogle, BsGithub } from "react-icons/bs";
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { GoogleLogin} from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -10,7 +10,7 @@ const LogIn = ({clientId, appId}) => {
   const [user, setUser] = useState({});
 
   const onSuccess = (response) => {
-    console.log(response.profileObj);
+    // console.log(response.profileObj);
     setUser(response.profileObj);
   };
 
@@ -20,10 +20,11 @@ const LogIn = ({clientId, appId}) => {
 
   const logOut = () => {
     setUser(null);
+
   }
   useEffect(() => {
     // debug user info
-    console.log("------------user",user, appId)
+    console.log("------------Local")
   });
 
   const fbClicked = (data) => {
@@ -41,9 +42,7 @@ const LogIn = ({clientId, appId}) => {
         Object.keys(user).length ? (
           <>
           <Navbar img={user.imageUrl} name={user.name}/>
-          {/* Problem when log out*/}
-          <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut}/> 
-          
+          <button onClick={logOut}><a href={"/"}>Log Out</a></button> 
           </>
           
           ) : (
