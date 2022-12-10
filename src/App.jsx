@@ -6,6 +6,8 @@ import { gapi } from 'gapi-script';
 
 const App = () => {
     const client_id = process.env.REACT_APP_CLIENT_ID;
+    const app_id = process.env.REACT_APP_APP_ID;
+
     useEffect(() => {
         // initialize the client
         const initClient = () => {
@@ -20,7 +22,7 @@ const App = () => {
     return (
         <div>
             {/* <Navbar/> Pages*/}
-            <LogIn clientId={client_id}/>
+            <LogIn clientId={client_id} appId={app_id}/>
         </div>
     );
 };
